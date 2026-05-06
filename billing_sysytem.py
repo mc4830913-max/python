@@ -94,6 +94,10 @@ fd.close()
 print("-----------------------------")
 print("inventory updated")
 
+
+
+
+
 using the json file billing system
 
 record={1001:{"Name":"dairy milk",      "price":100,"Qn":200},
@@ -104,6 +108,7 @@ record={1001:{"Name":"dairy milk",      "price":100,"Qn":200},
 
 
 import json
+import time
 fd=open("Record.json","r")
 js=fd.read()
 fd.close()
@@ -126,6 +131,16 @@ if (record[ui_pr]['Qn']>=ui_qn):
     print("-------------billing amount--------------")
     print("Billing_Amount         :",record[ui_pr]["price"]*ui_qn)
     print("-----------------------------------------")
+    sales=",".join(["1",
+    ui_name,
+    ui_mail,
+    ui_ph,
+    ui_pr,
+    record[ui_pr]['Name'],
+    str(ui_qn),
+    str(record[ui_pr]['price']),
+    str(record[ui_pr]['price'] * ui_qn),
+    time.ctime()])
 else:
     print("sorry we have not enoghh quantityn in oue iventory:")
     print("we have only",record[ui_pr]['Qn'],"quantity")
@@ -143,6 +158,16 @@ else:
         print("Billing_Amount         :",record[ui_pr]["price"]*record[ui_pr]['Qn'])
         print("-----------------------------------------") 
         record[ui_pr]["Qn"]=0
+        sales=",".join(["1",
+        ui_name,
+        ui_mail,
+        ui_ph,
+        ui_pr,
+        record[ui_pr]['Name'],
+        str(record[ui_pr]['Qn']),
+        str(record[ui_pr]['price']),
+        str(record[ui_pr]['price'] * record[ui_pr]['Qn']),
+        time.ctime()
     else:
         print("thanks")
 
