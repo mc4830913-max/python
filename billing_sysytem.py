@@ -116,15 +116,35 @@ print("---------------------------------------")
 ui_pr=str(input("enter the product id:"))
 ui_qn=int(input("enter the product quantity:"))
 
-record[ui_pr]["Qn"]=record[ui_pr]["Qn"]-ui_qn
-print("-----------------------------------------")
-print("                  BILL                   ")
-print("Name                  :",record[ui_pr]["Name"])
-print("Price                 :",record[ui_pr]["price"])
-print("quantity              :",ui_qn)
-print("-------------billing amount--------------")
-print("Billing_Amount         :",record[ui_pr]["price"]*ui_qn)
-print("-----------------------------------------")
+if (record[ui_pr]['Qn']>=ui_qn):
+    record[ui_pr]["Qn"]=record[ui_pr]["Qn"]-ui_qn
+    print("-----------------------------------------")
+    print("                  BILL                   ")
+    print("Name                  :",record[ui_pr]["Name"])
+    print("Price                 :",record[ui_pr]["price"])
+    print("quantity              :",ui_qn)
+    print("-------------billing amount--------------")
+    print("Billing_Amount         :",record[ui_pr]["price"]*ui_qn)
+    print("-----------------------------------------")
+else:
+    print("sorry we have not enoghh quantityn in oue iventory:")
+    print("we have only",record[ui_pr]['Qn'],"quantity")
+    print("-----------------------------------------")
+    
+    ch=str(input("press y if you want to puchase"))
+    if(ch=="y" or ch=="Y"):
+    
+        print("-----------------------------------------")
+        print("                  BILL                   ")
+        print("Name                  :",record[ui_pr]["Name"])
+        print("Price                 :",record[ui_pr]["price"])
+        print("quantity              :",record[ui_pr]['Qn'])
+        print("-------------billing amount--------------")
+        print("Billing_Amount         :",record[ui_pr]["price"]*record[ui_pr]['Qn'])
+        print("-----------------------------------------") 
+        record[ui_pr]["Qn"]=0
+    else:
+        print("thanks")
 
 js=json.dumps(record)
 
