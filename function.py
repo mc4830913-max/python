@@ -45,6 +45,63 @@ print(sqr([3,4,5,8,2]))
 print(cu([3,4,5,8,2]))
 list1 = [1, 2, 3]
 list2 = [4, 5, 6]
+
+
+-----------------------------------------------------------------------------------------------------------------------
+#student marksheet 
+import math
+student=str(input("enter your name:"))
+math=int(input("enter the marks in math:"))
+English=int(input("enter the marks in English:"))
+Hindi=int(input("enter the marks in Hindi:"))
+total=math,Hindi,English
+avg=(math+Hindi+English)/3
+print("student:",student)
+print("Total marks :",sum(total))
+print("Avergae :",avg)
+if avg>=90:
+    print("Grade :A")
+elif avg>=75 and avg<90: 
+    print("Grade :B")
+elif avg>=50 and avg<75:
+    print("Grade :C")
+else :
+    print("Fail")
+
+#hidden reward
+t=[2,4,6,8,10,12,14]
+num=int(input("enter the number:"))
+if num in t:
+    print("you won")
+else:
+    print("try again")
+
+
+#password checking 
+password=input("enter the password:")
+hasupper=False
+haslower=False
+hasdigit=False
+special=False
+for ch in password:
+    if ch.isupper():
+        hasupper=True
+    
+    if ch.islower():
+        haslower=True
+       
+    if ch.isdigit():
+        hasdigit=True
+    if ch in "@#$%!":
+        special=True
+if len(password)>=8 and hasupper and haslower and hasupper and special:
+    print("strong password")
+else:
+ print("weak password")
+    
+        
+
+
 print(final(list1,list2))
 print("*"*40)
 
