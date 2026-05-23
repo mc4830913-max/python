@@ -1,9 +1,47 @@
-2nd pattern
+//ist patterns
+num=3
+for i in range(1,num+1):
+    print(" "*(num-i)+"*"*i)
+for k in range(num,0,-1):
+    print(" "*(num-k)+"*"*k)
+
+
+//2nd pattern
 num=3
 for i in range(1,num+1):
     print(" "*(num-i)+"*"*i+"*"*(i-1))
 for k in range(num,0,-1):
     print(" "*(num-k)+"*"*k+"*"*(k-1))
+
+//3rd pattern
+num=5
+for i in range(1,num):
+    print(" "*(num-i)+"*"+" "*(2*(i-1))+"*")
+for k in range(num,0,-1):
+    print(" "*(num-k)+"*"+" "*(2*(k-1))+"*")
+
+
+//4th pattern
+num=15
+for i in range(1,num):
+    print(" "*i+"*")
+print("*"*(num+1))
+for k in range(num,0,-1):
+    print(" "*k+"*") 
+
+
+//5th pattern
+num=15
+print(" "*(num+1)+"*")
+for i in range(1,num):
+    print(" "*(num-i)+"*"+" "*(2*i)+"*")
+print("*"*((2*num)+2))
+print(" ")
+print("*"*((2*num)+2))
+for k in range(num,0,-1):
+    print(" "*(num-k)+"*"+" "*(2*k)+"*")
+print(" "*(num+1)+"*")   
+
 
 //6th pattern
 num=15
