@@ -140,3 +140,13 @@ print(np.bitwise_or(x,y))
 print(np.bitwise_not(x,y))
 print(np.bitwise_xor(x,y))
 print(np.bitwise_right_shift(y,x))
+
+
+##where clause in array
+np.random.seed(10)
+arr=np.random.randint(0,12,size=(3,2,3))
+print(arr)
+
+indices=np.where(arr>=5)
+print(list[indices])
+print(arr[indices])
