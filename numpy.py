@@ -153,5 +153,49 @@ print(arr)
 print(arr_)
 
 
+arr=np.zeros((3,4,5),dtype=int)
+print(arr)
+
+
+arr=np.ones((3,4,5),dtype=int)
+print(arr)
+
+
+arr=np.eye((5),dtype=int)
+print(arr)
+
+
+##random number generator
+arr=np.random.rand(2,3)
+print(arr)
+
+arr=np.random.randint(low=10,high=50,size=(5,5))
+print(arr)
+
+arr=np.random.uniform()
+print(arr)
+
+
+arr=np.random.randint(low=1,high=50,size=100)
+for i in range(1,10):
+    print(i,arr.tolist().count(i))
+
+
+###managing random with seeds
+np.random.seed(5)
+print(np.random.rand())
+print(np.random.rand(10))
+print(np.random.rand(3,4))
+arr=np.random.randint(2,size=100)
+print(len(arr[arr==1]))
+print(len(arr[arr==0]))
+
+
+for i in range(10):
+    arr=np.random.randint(2,size=1000)
+    print(len(arr[arr==1]),len(arr[arr==1]))
+
+
+
 
 
