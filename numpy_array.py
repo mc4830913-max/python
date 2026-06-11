@@ -52,3 +52,34 @@ print(concat_arr)
 concat_arr=np.stack((arr1,arr2,arr3,arr4),axis=1)
 print(concat_arr)
 print("*"*20)
+
+arr=np.array([[[1,2,3],[4,5,6]],[[6,3,5],[9,8,7]]])
+print(arr)
+print("--------------------")
+
+
+##accesing the specific elements 
+print(arr[0][1][1])
+print(arr[1,1,2])
+print("--------------------")
+
+##accesing the specidic rows
+print(arr[0])
+print("--------------------")
+print(arr[1,:,:])
+print("--------------------")
+print(arr[:,1,:])
+print(arr[:,0,2])
+print('------------------')
+
+##accesing eith the specific case
+print(arr[[0,1],:,:])
+print(arr[[1],:,:-1])
+print(arr[[0],1,1:])
+print("-----------------")
+
+##accessing with the specific condtitions
+print(arr[arr>5])
+print(arr[arr==5])
+arr[arr>8]=0
+print(arr)
