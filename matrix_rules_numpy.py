@@ -54,3 +54,21 @@ np.savetxt("dataset.csv",arr,delimiter=",",header="a,b,c")
 
 np.savetxt("jsonn.json",arr,delimiter=",",header="{data :  [",footer="] }")
 np.savetxt("data_of_yml.yaml",arr,delimiter=",",header="-data:")
+
+###load the data with numpy
+data=np.loadtxt("dataset.csv",delimiter=",")
+print(data)
+
+data=np.loadtxt("data.txt",delimiter=",")
+print(data)
+
+data=np.loadtxt("data_of_yml.yaml",delimiter=",")
+print(data)
+
+data=np.loadtxt("jsonn.json",delimiter=",")
+print(data)
+
+###writing the  data with numpy
+##replacing the values
+arr=np.array([4,5,6])
+np.savetxt("data.txt",arr)
