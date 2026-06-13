@@ -105,6 +105,54 @@ print("igr            :",iqr)
 print("skeness        :",skewness)
 print("kutosis        :",kutorsis)
 
+###serching and sorting
+arr=np.array([1,3,5,6,7,8,9,0,3,4,5,6,7])
+print(arr)
+
+##linear search
+index=np.where(arr==6)[0]
+print(index)
+
+##binary search
+index1=np.searchsorted(arr,3)
+print(index1)
+
+##binary search with multiple value
+index1=np.searchsorted(arr,[3,5])
+print(index1)
+
+##serching the closesets value
+index2=np.argmin(abs(arr-11))
+print(index2)
+
+##sorting
+###quick sort
+sorted_arr=np.sort(arr)
+print(sorted_arr)
+
+##quick sort
+sorted_arr=np.sort(arr,kind="quicksort")
+print(sorted_arr)
+
+##heap sort
+sorted_arr=np.sort(arr,kind="heapsort")
+print(sorted_arr)
+
+##merge sort
+sorted_arr=np.sort(arr,kind="mergesort")
+print(sorted_arr)
+
+sorted_arr=np.sort(arr,kind="stablesort")
+print(sorted_arr)
+
+import numpy as np
+
+data = np.array(["apple", "banana", "apple", "orange", "banana", "apple"])
+
+unique_items, counts = np.unique(data, return_counts=True)
+
+print("Unique elements:", unique_items)
+print("Counts:", counts)
 
 
 
