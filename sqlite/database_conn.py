@@ -1,9 +1,9 @@
 import mysql.connector
 
-Host="localhost"
-User="root"
-Password="Mona@123"
-Database="data1"
+Host="#########"
+User="###"
+Password="#######"
+Database="########"
 
 conn=mysql.connector.connect(
 host=Host,
