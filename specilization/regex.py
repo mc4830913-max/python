@@ -65,3 +65,46 @@ txt="This 5 is not divisible by 6 and 9"
 print(re.findall("[A-Za-z0-9]",txt))
 
 
+##removal of special charchter 
+txt="Today is @the 77th independen!ce day .we $ #feel ve^ry happy today.?"
+print("".join(re.findall("[^@$!#*^?]+",txt)))
+
+##exclusion
+txt="Today is the 77th independence day .we feel very happy today."
+# print(re.findall("\D",txt))
+
+txt="hello guys welcome to geeks-for-geeks .hope you all are feeling  work-it-out"
+print(re.findall("\w\w\w\w\w-\w\w\w-\w\w\w\w\w",txt))
+print(re.findall("[\w]+-[\w]+-[\w]+",txt))
+
+##phone number matching pattern
+txt="875-735-3476,4665-75636-645,465-8466-3735,3455-6h56-3476"
+print(re.findall("[\d]+-[\d]+-[\d]+",txt))    
+
+## email finding 
+email="monika123@gmail.com"
+pattern="[\w]+[\d]+@[\w]+.[\w]+"
+print(re.search(pattern,email).group())
+
+email="monika123@gmail.com"
+a="moniT352@gmail.in"
+pattern="[A-Za-z0-9]+@[\w]+.[\w]+"
+print(re.search(pattern,email).group())
+print(re.search(pattern,a).group())
+
+##email id with specific Domain
+gmail="monikaJI123@lcet.org"
+mail="monikaJI123@lcet.gov"
+
+p="[A-Za-z0-9]+@(lcet).(org)$"
+
+print(re.search(p,gmail).group())
+print(re.search(p,mail).group())  ## it give the error 
+
+
+## emial finding with the multiple domain
+Email="monikaJI123@lcet.in"
+p="[A-Za-z0-9]+@[A-Za-z]+.(org|in|gov|com|edu)"
+print(re.search(p,Email).group())
+
+
